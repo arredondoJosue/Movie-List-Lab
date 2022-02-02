@@ -25,7 +25,9 @@ document.querySelector('form').addEventListener('submit', addMovie)
 
 const deleteMovie = (event) => {
     event.target.parentNode.remove()
-    message.textContent = `${event.target.parentNode.textContent.replace('X', '')} Deleted`
+    // message.textContent = `${event.target.parentNode.textContent.replace('X', '')} Deleted`
+    // message.textContent = `${event.target.parentNode.querySelector('span').textContent} Deleted`
+    message.textContent = `${event.target.parentNode.firstElementChild.textContent} Deleted`
     revealMessage()
 }
 
